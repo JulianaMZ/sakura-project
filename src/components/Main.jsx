@@ -15,7 +15,7 @@ export default function Main({cards,setCards}) {
           </div>
         ))}
       </div>
-      <Link to="/page2" className="back-home">Continuar</Link>
+      <Link to="/page2" className="back-home">Ir a la segunda página</Link>
     </div>
   )
 }
