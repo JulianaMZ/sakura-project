@@ -1,7 +1,6 @@
 import React from "react";
 
-export default function Main(props) {
-  const { cards, setCards } = props;
+export default function Main({cards,setCards}) {
   
   const resetCards = () => {
     setCards(null);
@@ -15,7 +14,7 @@ export default function Main(props) {
       <div className="container-cards">
         {cards.map((card, index) => (
           <div className="card-container" key={index}>
-            <p>{card.clowReverse}</p>
+          <img src={card.cardsReverse.clowReverse}alt={card.spanishName}/>
           </div>
         ))}
       </div>

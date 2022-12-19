@@ -1,6 +1,6 @@
 import imagenBolaCristal from './assets/img/bola-cristal.png';
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Main from './components/Main';
 import {Link} from 'react-router-dom';
 
@@ -8,13 +8,23 @@ import {Link} from 'react-router-dom';
 function App() {
   const [cards, setCards] = useState(null);
   
-  const reqApi = async () => {
+  /*const reqApi = async () => {
     const api = await fetch('https://6388b6e5a4bb27a7f78f96a5.mockapi.io/sakura-cards/')
     const cardsApi = await api.json();
-   console.log(cardsApi)
-    setCards(cardsApi.results);
-  };
+    console.log(cardsApi)
+    setCards(cardsApi);
+  };*/
 
+  useEffect(() => {
+    fetch('https://6388b6e5a4bb27a7f78f96a5.mockapi.io/sakura-cards/')
+    .then((response) => response.json())
+    .then((data) => setCards(data));
+
+
+   // console.log(cardsApi)
+   // setCards(cardsApi);
+  }, [])
+  
 
   return (
     <div className='App'>
@@ -25,7 +35,7 @@ function App() {
         ) : (
           <div>
             <img src={imagenBolaCristal} alt="Bolita de Cristal" className='img-logo' />
-            <Link to='/page2' onClick={reqApi} className="btn-search">Baraja las Cartas
+            <Link to='/page2' className="btn-search">Baraja las Cartas
             </Link>
           </div>
         )}
