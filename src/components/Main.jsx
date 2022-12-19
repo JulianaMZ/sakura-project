@@ -1,24 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Main({cards,setCards}) {
   
-  const resetCards = () => {
-    setCards(null);
-  };
   console.log(cards);
 
   return (
     <div className="cards">
-      <h1>Cartas</h1>
-      <span className="back-home" onClick={resetCards}>Volver a la home</span>
-      <div className="container-cards">
+      <h1>Escoge 3 cartas</h1>
+        <div className="container-cards">
         {cards.map((card, index) => (
           <div className="card-container" key={index}>
-          <img src={card.cardsReverse.clowReverse}alt={card.spanishName}/>
+            <img src={card.cardsReverse.clowReverse}alt={card.spanisName}/>
           </div>
         ))}
       </div>
+      <Link to="/page2" className="back-home">Continuar</Link>
     </div>
   )
 }
-

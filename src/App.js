@@ -1,8 +1,8 @@
-import imagenBolaCristal from './assets/img/bola-cristal.png';
+//import imagenBolaCristal from './assets/img/bola-cristal.png';
 import './App.css';
 import { useState, useEffect } from 'react';
 import Main from './components/Main';
-import {Link} from 'react-router-dom';
+//import {Link} from 'react-router-dom';
 
 
 function App() {
@@ -30,16 +30,8 @@ function App() {
     <div className='App'>
       <header className='App-header'>
         <h1 className='title'>Sakura Tarot</h1>
-        {cards ? (
-          <Main cards={cards} setCards={setCards} />
-        ) : (
-          <div>
-            <img src={imagenBolaCristal} alt="Bolita de Cristal" className='img-logo' />
-            <Link to='/page2' className="btn-search">Baraja las Cartas
-            </Link>
-          </div>
-        )}
-    
+        {cards? <Main cards={cards} setCards={setCards} />:
+        <div></div>}
       </header>
     </div>
   );
