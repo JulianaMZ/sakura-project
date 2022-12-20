@@ -1,24 +1,42 @@
+import imagenBolaCristal from './assets/img/bola-cristal.png';
 import './App.css';
+import { useState, useEffect } from 'react';
+import Main from './components/Main';
+//import {Link} from 'react-router-dom';
+
 
 function App() {
+  const [cards, setCards] = useState(null);
+  
+  /*const reqApi = async () => {
+    const api = await fetch('https://6388b6e5a4bb27a7f78f96a5.mockapi.io/sakura-cards/')
+    const cardsApi = await api.json();
+    console.log(cardsApi)
+    setCards(cardsApi);
+  };*/
+
+  useEffect(() => {
+    fetch('https://6388b6e5a4bb27a7f78f96a5.mockapi.io/sakura-cards/')
+    .then((response) => response.json())
+    .then((data) => setCards(data));
+
+
+   // console.log(cardsApi)
+   // setCards(cardsApi);
+  }, [])
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className='App'>
+      <header className='App-header'>
+        <h1 className='title'>Sakura Tarot</h1>
+        <p>Pasado, Presente y Futuro</p>
+        <img src={imagenBolaCristal} alt="Bola de cristal" className='img-home' />
+        {cards? <Main cards={cards} setCards={setCards} />:
+        <div></div>}
       </header>
     </div>
   );
 }
 
-export default App;
+export default App
