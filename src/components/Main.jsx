@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import '../styles/Main.css';
+import '../styles/main.css';
 
 
 export default function Main({cards,setCards}) {
