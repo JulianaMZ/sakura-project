@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import '../styles/Main.css';
 
 export default function Main({cards,setCards}) {
   
@@ -15,7 +16,7 @@ export default function Main({cards,setCards}) {
           </div>
         ))}
       </div>
-      <Link to="/page2" className="back-home">Ir a la segunda página</Link>
+      <Link to="/page2" className="back-home">Revela tus Cartas</Link>
     </div>
   )
 }

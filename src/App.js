@@ -1,4 +1,4 @@
-//import imagenBolaCristal from './assets/img/bola-cristal.png';
+import imagenBolaCristal from './assets/img/bola-cristal.png';
 import './App.css';
 import { useState, useEffect } from 'react';
 import Main from './components/Main';
@@ -30,6 +30,8 @@ function App() {
     <div className='App'>
       <header className='App-header'>
         <h1 className='title'>Sakura Tarot</h1>
+        <p>Pasado, Presente y Futuro</p>
+        <img src={imagenBolaCristal} alt="Bola de cristal" className='img-home' />
         {cards? <Main cards={cards} setCards={setCards} />:
         <div></div>}
       </header>
