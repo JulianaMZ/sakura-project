@@ -48,10 +48,3 @@ El tema es: Sakura y las cartas elegidas: clown.
 ## :raising_hand_woman:Autoras​
 - [@​JulianaMZ](https://github.com/JulianaMZ)
 - [@bgiudicid](https://github.com/bgiudicid)   
-     
-## Acknowledgements
-​
- - [Readme template](https://readme.so/)
- - [How to do a hamburguer menu](https://codepen.io/alvarotrigo/pen/MWEJEWG)
- - [JavaScript events](https://www.w3schools.com/js/js_events.asp)
- - [Figma variants](https://help.figma.com/hc/en-us/articles/360056440594-Create-and-use-variants)
