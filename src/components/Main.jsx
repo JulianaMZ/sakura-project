@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import '../styles/main.css';
-import ReactCardFlip from 'react-card-flip';
+
 
 
 export default function Main({cards,setCards}) {
