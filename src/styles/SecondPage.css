@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Ruda:wght@400;600;700&display=swap');
+
+* {
+    background-color: #823EA3;
+    font-family: 'Ruda', sans-serif;
+
+}
+
+.cards {
+    text-align: center;
+}
+
+.back-main {
+    color: black;
+    font-size: 30px;
+    background-color: #DDAA26;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 1px 35px;
+    font-family: 'Italianno', cursive;
+   
+}
+footer {
+    margin-left: 55px;
+    margin-top: 450px;
+}
+

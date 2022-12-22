@@ -3,6 +3,7 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import Main from './components/Main';
 //import {Link} from 'react-router-dom';
+import { shuffle } from 'lodash';
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
   useEffect(() => {
     fetch('https://6388b6e5a4bb27a7f78f96a5.mockapi.io/sakura-cards/')
     .then((response) => response.json())
-    .then((data) => setCards(data));
+    .then((data) => setCards(shuffle(data)));
 
 
    // console.log(cardsApi)

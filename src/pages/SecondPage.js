@@ -1,13 +1,18 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
+import '../styles/SecondPage.css';
 
 function SecondPage() {
 
   return (
-    <div className='cards'>
+    <header>
+      <div className='cards'>
         <h1>Escoge tres Cartas</h1>
-        <Link to='/'>Go to the home page</Link> 
-    </div>
+      </div>
+      <footer>
+        <Link to='/' className="back-main">Pagina Principal</Link> 
+      </footer>
+    </header>
   );
 }
 
