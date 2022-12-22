@@ -10,7 +10,9 @@
 
   @media (max-width: 320px) {
     
-  
+  h1 {
+    font-size: 30px;
+  }
   .back-home {
     color: black;
     font-size: 30px;
@@ -29,7 +31,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(11, 1fr);
-    margin-right: 5.5px;
+    margin-right: 4px;
     gap: 10px;
     margin-bottom: 18px;
   
@@ -37,6 +39,7 @@
   .card-container{
     width: 50px;
     height: 120px;
+   
     
    
   }
