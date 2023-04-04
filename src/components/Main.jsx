@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import '../styles/main.css';
 
 
+
 export default function Main({cards,setCards}) {
   
   console.log(cards);
@@ -13,7 +14,9 @@ export default function Main({cards,setCards}) {
         <div className="container-cards">
         {cards.map((card, index) => (
           <div className="card-container" key={index}>
+            <button>
             <img src={card.cardsReverse.clowReverse}alt={card.spanisName}/>
+            </button>
           </div>
         ))}
       </div>

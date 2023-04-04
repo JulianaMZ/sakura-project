@@ -33,7 +33,7 @@ function App() {
         <h1 className='title'>Sakura Tarot</h1>
         <p>Pasado, Presente y Futuro</p>
         <img src={imagenBolaCristal} alt="Bola de cristal" className='img-home' />
-        {cards? <Main cards={cards} setCards={setCards} />:
+        {cards? <Main cards={cards}/>:
         <div></div>}
       </header>
     </div>
